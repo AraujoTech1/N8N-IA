@@ -1,4 +1,4 @@
-<h1 align="center">🤖 Chatbot para WhatsApp (n8n & waha) 🤖</h1>
+<h1 align="center">🤖 Chatbot para WhatsApp 🤖</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/n8n-FF6D6D?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n" />
