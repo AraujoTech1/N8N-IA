@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/badge/n8n-FF6D6D?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n" />
 </p>
 
+---
 
 ## Descrição 
 
@@ -82,6 +83,8 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LI
 ---
 
 <p align="center">
-Desenvolvido com while(true) { ☕++ }  
-*Loop infinito de produtividade*
+Desenvolvido com while(true) { ☕++ }<br>
+<em>Loop infinito de produtividade</em>
 </p>
+
+
