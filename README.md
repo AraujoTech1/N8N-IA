@@ -81,4 +81,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LI
 
 ---
 
-<p align="center">Desenvolvido com +++☕</p>
+<p align="center">
+Desenvolvido com while(true) { ☕++ }  
+*Loop infinito de produtividade*
+</p>
