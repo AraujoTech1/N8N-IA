@@ -4,9 +4,9 @@
   <img src="https://img.shields.io/badge/n8n-FF6D6D?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n" />
 </p>
 
----
 
-## Descrição 
+
+# Descrição 
 
 Chatbot para WhatsApp utilizando automação via n8n, integração com a WhatsApp HTTP API (WAHA) e geração de respostas com OpenAI ou Azure OpenAI. Com capacidade de respostas inteligentes baseada em IA. O fluxo automatizado é orquestrado visualmente através da plataforma **n8n**, que interage com o WhatsApp via **WAHA (WhatsApp HTTP API)**. As respostas são geradas com **GPT-3.5-turbo** da OpenAI ou Azure OpenAI, e o histórico pode ser armazenado no **Redis** para contexto de conversas.
 
@@ -14,7 +14,7 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 
 ---
 
-## Funcionalidades 
+# Funcionalidades 
 
 - Recebe mensagens do WhatsApp via Webhook.
 - Envia mensagens automatizadas usando inteligência artificial (IA).
@@ -25,7 +25,7 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 
 ---
 
-## Testes de Software
+# Testes de Software
 
 **Tipos de testes realizados:**
 
@@ -44,12 +44,12 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 
 ---
 
-## Tecnologias
+# Tecnologias
 ![n8n](https://img.shields.io/badge/n8n-FF6D6D?style=flat-square&logo=n8n&logoColor=white) ![JSON](https://img.shields.io/badge/JSON-000000?style=flat-square&logo=json&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white)
 
 ---
 
-## Bibliotecas e Frameworks
+# Bibliotecas e Frameworks
 
 - [WAHA (WhatsApp HTTP API)](https://github.com/diego3g/whatsapp-http-api)
 - [OpenAI API](https://platform.openai.com/docs) ou [Azure OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/)
@@ -58,7 +58,7 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 
 ---
 
-## Pré-requisitos e Instalações
+# Pré-requisitos e Instalações
 
 - Docker Desktop instalado ou Cloud da Azure 
 - Conta na OpenAI ou Azure OpenAI com chave de API ativa
@@ -66,7 +66,7 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 
 ---
 
-## Instruções de Uso
+# Instruções de Uso
 
 1. Clone o repositório:
 - git clone https://github.com/seuusuario/n8n-waha-bot.git
@@ -75,7 +75,7 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 - Artigo: [Como automatizar tarefas com n8n e IA](https://web.dio.me/articles/como-automatizar-tarefas-com-n8n-e-ia-utilizando-chatgpt-gemini-e-azure-ai-bed520ef0cda)
 
 ---
-## ⚖️ Licença ⚖️
+# ⚖️ Licença ⚖️
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
