@@ -1,0 +1,112 @@
+{
+  "name": "WAHA Chatbot com OpenAI",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "webhook",
+        "method": "POST"
+      },
+      "id": "webhook",
+      "name": "Webhook WhatsApp",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "mode": "keepOnlySet",
+        "values": {
+          "string": [
+            {
+              "name": "mensagem",
+              "value": "={{$json.body.message}}"
+            },
+            {
+              "name": "chat_id",
+              "value": "={{$json.body.chatId}}"
+            }
+          ]
+        }
+      },
+      "id": "set_dados",
+      "name": "Extrair dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "none",
+        "requestMethod": "POST",
+        "url": "={{$env.OPENAI_ENDPOINT}}/openai/deployments/{{$env.OPENAI_DEPLOYMENT}}/chat/completions?api-version=2024-03-01-preview",
+        "jsonParameters": true,
+        "headers": [
+          {
+            "name": "api-key",
+            "value": "={{$env.OPENAI_API_KEY}}"
+          },
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "bodyParametersJson": "={\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"Você é um assistente útil e conciso.\"},\n    {\"role\": \"user\", \"content\": \"{{$json[\"mensagem\"]}}\"}\n  ],\n  \"temperature\": 0.7,\n  \"max_tokens\": 100,\n  \"top_p\": 1,\n  \"frequency_penalty\": 0,\n  \"presence_penalty\": 0,\n  \"stop\": null\n}"
+      },
+      "id": "openai_request",
+      "name": "Enviar para OpenAI",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json[\"chat_id\"]}}",
+        "text": "={{$json.choices[0].message.content}}"
+      },
+      "id": "resposta_waha",
+      "name": "Responder no WhatsApp",
+      "type": "n8n-nodes-waha.sendMessage",
+      "typeVersion": 1,
+      "position": [1000, 300]
+    }
+  ],
+  "connections": {
+    "Webhook WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "Extrair dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair dados": {
+      "main": [
+        [
+          {
+            "node": "Enviar para OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar para OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Responder no WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": "waha-openai-chatbot",
+  "versionId": "1"
+}
