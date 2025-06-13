@@ -72,7 +72,7 @@ Tudo roda em containers Docker, facilitando a instalação local ou em nuvem.
 - git clone https://github.com/seuusuario/n8n-waha-bot.git
 
 2. Passo a Passo completo no artigo que criei:
-- Artigo: [Como automatizar tarefas com n8n e IA](https://web.dio.me/articles/como-automatizar-tarefas-com-n8n-e-ia-utilizando-chatgpt-gemini-e-azure-ai-bed520ef0cda)
+- Artigo: [Como automatizar tarefas com n8n e IA](https://www.dio.me/articles/como-automatizar-tarefas-com-n8n-e-ia-utilizando-chatgpt-gemini-e-azure-ai-bed520ef0cda)
 
 ---
 # ⚖️ Licença ⚖️
